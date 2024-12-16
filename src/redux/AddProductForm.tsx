@@ -1,10 +1,10 @@
-import React, { useState } from "react";
-import { useDispatch } from "react-redux";
-import { addProduct } from "./cartSlice";
+import React, { useState } from 'react';
+import { useDispatch } from 'react-redux';
+import { addProduct } from './cartSlice';
 
 const AddProductForm: React.FC = () => {
   const dispatch = useDispatch();
-  const [name, setName] = useState("");
+  const [name, setName] = useState('');
   const [price, setPrice] = useState<number>(0);
   const [quantity, setQuantity] = useState<number>(1);
 
@@ -17,7 +17,7 @@ const AddProductForm: React.FC = () => {
       quantity,
     };
     dispatch(addProduct(newProduct));
-    setName("");
+    setName('');
     setPrice(0);
     setQuantity(1);
   };

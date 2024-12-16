@@ -1,5 +1,5 @@
-import React from "react";
-import logo from "../logo.svg";
+import React from 'react';
+import logo from '../logo.svg';
 const LearningTailwind = () => {
   return (
     <div className="mx-auto flex max-w-sm items-center gap-x-4 rounded-xl bg-white p-6 shadow-lg">

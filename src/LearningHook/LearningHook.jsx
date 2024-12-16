@@ -1,14 +1,14 @@
-import React from "react";
-import { useState } from "react";
+import React from 'react';
+import { useState } from 'react';
 const LearningHook = () => {
   const [form, setForm] = useState({
-    fullname: "le nhat",
+    fullname: 'le nhat',
     age: 20,
-    sex: "male",
+    sex: 'male',
   });
-  console.log(`${form.fullname} - ${form.age} - ${form.sex}`);
+  // console.log(`${form.fullname} - ${form.age} - ${form.sex}`);
   return (
-    <>
+    <div>
       <input
         type="text"
         value={form.fullname}
@@ -39,7 +39,7 @@ const LearningHook = () => {
           })
         }
       />
-    </>
+    </div>
   );
 };
 

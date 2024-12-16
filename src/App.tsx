@@ -1,6 +1,6 @@
-import React from "react";
+import React from 'react';
 // import logo from "./logo.svg";
-import "./App.css";
+import './App.css';
 // import { Button, ConfigProvider } from "antd";
 // import Auth from "./auth/Auth";
 // import LearningTailwind from "./LearningTailwind/LearningTailwind";
@@ -12,14 +12,14 @@ import "./App.css";
 // import LearningTw from "./omg/LearningTw";
 // import LoginForm from "./omg/Login";
 // import Layout from "./LearningTailwind/Layout/Layout";
-import TestLayOut from "./LearningTailwind/Layout/TestLayOut";
-import LearningHook from "./LearningHook/LearningHook";
-import Product from "./redux/Product";
-import { Provider } from "react-redux";
-import { store } from "./redux/store";
-import Cart from "./redux/Cart";
-import AddProductForm from "./redux/AddProductForm";
-import Antd from "./learningAntd/Antd";
+import TestLayOut from './LearningTailwind/Layout/TestLayOut';
+// import LearningHook from "./LearningHook/LearningHook";
+// import Product from "./redux/Product";
+// import { Provider } from "react-redux";
+// import { store } from "./redux/store";
+// import Cart from "./redux/Cart";
+// import AddProductForm from "./redux/AddProductForm";
+// import Antd from "./learningAntd/Antd";
 
 const App: React.FC = () => {
   return (
@@ -33,12 +33,12 @@ const App: React.FC = () => {
     //   </div>
     // </Provider>
 
-    // <div className="container">
-    //   {/* <h1 style={{ marginLeft: "96px" }} ml-96> */}
-    //   {/* <Auth />; */}
-    //   <LearningTailwin />
+  // <div className="container">
+  //   {/* <h1 style={{ marginLeft: "96px" }} ml-96> */}
+  //   {/* <Auth />; */}
+  //   <LearningTailwin />
 
-    // </div>
+  // </div>
   );
 };
 

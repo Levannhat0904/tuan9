@@ -1,6 +1,6 @@
-import React from "react";
-import { deleteProduct, Product, updateProduct } from "./cartSlice";
-import { useDispatch } from "react-redux";
+import React from 'react';
+import { deleteProduct, Product, updateProduct } from './cartSlice';
+import { useDispatch } from 'react-redux';
 
 interface CartItemProps {
   product: Product;

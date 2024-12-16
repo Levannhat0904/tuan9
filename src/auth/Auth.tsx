@@ -1,6 +1,6 @@
-import React from "react";
-import type { FormProps } from "antd";
-import { Button, Checkbox, Form, Input } from "antd";
+import React from 'react';
+import type { FormProps } from 'antd';
+import { Button, Checkbox, Form, Input } from 'antd';
 
 type FieldType = {
   username?: string;
@@ -8,17 +8,19 @@ type FieldType = {
   remember?: string;
 };
 
-const onFinish: FormProps<FieldType>["onFinish"] = (values) => {
-  console.log("Success:", values);
+const onFinish: FormProps<FieldType>['onFinish'] = (values) => {
+  // console.log('Success:', values);
+  alert(values);
 };
 
-const onFinishFailed: FormProps<FieldType>["onFinishFailed"] = (errorInfo) => {
-  console.log("Failed:", errorInfo);
+const onFinishFailed: FormProps<FieldType>['onFinishFailed'] = (errorInfo) => {
+  // console.log('Failed:', errorInfo);
+  alert(errorInfo);
 };
 
 const Auth: React.FC = () => (
   <div className="form-login">
-    <h3 style={{ color: "black" }}>Đăng nhập</h3>
+    <h3 style={{ color: 'black' }}>Đăng nhập</h3>
     <Form
       className="form-login-item"
       name="basic"
@@ -35,7 +37,7 @@ const Auth: React.FC = () => (
         wrapperCol={{ span: 18 }}
         label="Username"
         name="username"
-        rules={[{ required: true, message: "Please input your username!" }]}
+        rules={[{ required: true, message: 'Please input your username!' }]}
       >
         <Input />
       </Form.Item>
@@ -45,14 +47,14 @@ const Auth: React.FC = () => (
         name="password"
         labelCol={{ span: 5 }}
         wrapperCol={{ span: 18 }}
-        rules={[{ required: true, message: "Please input your password!" }]}
+        rules={[{ required: true, message: 'Please input your password!' }]}
       >
         <Input.Password />
       </Form.Item>
 
       <Form.Item<FieldType>
         wrapperCol={{ span: 24 }}
-        style={{ display: "flex", justifyContent: "center" }}
+        style={{ display: 'flex', justifyContent: 'center' }}
         name="remember"
         valuePropName="checked"
         label={null}
@@ -63,7 +65,7 @@ const Auth: React.FC = () => (
       <Form.Item
         label={null}
         wrapperCol={{ span: 24 }}
-        style={{ display: "flex", justifyContent: "center" }}
+        style={{ display: 'flex', justifyContent: 'center' }}
       >
         <Button type="primary" htmlType="submit">
           Đăng nhập

@@ -1,13 +1,13 @@
-import { Button, Card, Typography } from "antd";
-import React, { useState } from "react";
+import { Button, Card, Typography } from 'antd';
+import React from 'react';
 // thiết kế giao diẹn hiện thị product
 const { Title, Text } = Typography;
 const Antd: React.FC = () => {
   const product = {
-    name: "ao thun basic",
-    price: "230,000vnd",
-    desc: "Ao thun cotton mac siu mat",
-    img: "logo.png",
+    name: 'ao thun basic',
+    price: '230,000vnd',
+    desc: 'Ao thun cotton mac siu mat',
+    img: 'logo.png',
   };
   return (
     <Card

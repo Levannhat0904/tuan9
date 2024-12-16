@@ -1,26 +1,28 @@
-import { LockOutlined, UserOutlined } from "@ant-design/icons";
-import { Button, Checkbox, Form, Input, Flex } from "antd";
+import React from 'react';
+import { LockOutlined, UserOutlined } from '@ant-design/icons';
+import { Button, Checkbox, Form, Input, Flex } from 'antd';
 const LoginForm = () => {
   const onFinish = (values) => {
-    console.log("Received values of form: ", values);
+    alert(values);
+    //     console.log('Received values of form: ', values);
   };
   return (
     <Form
       name="login"
-      initialValues={{ remember: "true" }}
+      initialValues={{ remember: 'true' }}
       style={{ maxWidth: 360 }}
       onFinish={onFinish}
     >
       <h1 className="mb-2 font-sans font-bold uppercase">Login</h1>
       <Form.Item
         name="username"
-        rules={[{ required: true, message: "Please input your Username!" }]}
+        rules={[{ required: true, message: 'Please input your Username!' }]}
       >
         <Input prefix={<UserOutlined />} placeholder="Username" />
       </Form.Item>
       <Form.Item
         name="password"
-        rules={[{ required: true, message: "Please input your Password!" }]}
+        rules={[{ required: true, message: 'Please input your Password!' }]}
       >
         <Input
           prefix={<LockOutlined />}

@@ -1,5 +1,5 @@
-import { Flex, Layout, Menu, MenuProps } from "antd";
-import React, { useState } from "react";
+import { Flex, Layout, Menu, MenuProps } from 'antd';
+import React, { useState } from 'react';
 import {
   AppstoreOutlined,
   LaptopOutlined,
@@ -7,100 +7,100 @@ import {
   NotificationOutlined,
   SettingOutlined,
   UserOutlined,
-} from "@ant-design/icons";
+} from '@ant-design/icons';
 
 const TestLayOut = () => {
   const { Header, Footer, Sider, Content } = Layout;
   const headerStyle: React.CSSProperties = {
-    textAlign: "center",
-    color: "black",
+    textAlign: 'center',
+    color: 'black',
     height: 64,
     paddingInline: 48,
     zIndex: 1,
-    lineHeight: "64px",
-    backgroundColor: "#fff",
+    lineHeight: '64px',
+    backgroundColor: '#fff',
   };
   const contentStyle: React.CSSProperties = {
-    textAlign: "center",
+    textAlign: 'center',
     minHeight: `calc(100vh - (${headerStyle.height}px))`,
-    lineHeight: "120px",
-    width: `150px`,
+    lineHeight: '120px',
+    width: '150px',
     marginTop: `calc(${headerStyle.height}px)`,
-    color: "#fff",
-    backgroundColor: "#fff",
+    color: '#fff',
+    backgroundColor: '#fff',
   };
   const siderStyle: React.CSSProperties = {
-    textAlign: "center",
-    lineHeight: "120px",
+    textAlign: 'center',
+    lineHeight: '120px',
     marginTop: `calc(${headerStyle.height}px)`,
-    color: "black",
-    backgroundColor: "#1677ff",
+    color: 'black',
+    backgroundColor: '#1677ff',
   };
   const footerStyle: React.CSSProperties = {
-    textAlign: "center",
-    color: "black",
-    backgroundColor: "#fff",
+    textAlign: 'center',
+    color: 'black',
+    backgroundColor: '#fff',
   };
   const LayoutStyle: React.CSSProperties = {
     borderRadius: 8,
-    overflow: "hidden",
-    width: "100%",
-    maxWidth: "100%",
+    overflow: 'hidden',
+    width: '100%',
+    maxWidth: '100%',
   };
-  type MenuItem = Required<MenuProps>["items"][number];
+  type MenuItem = Required<MenuProps>['items'][number];
   const items: MenuItem[] = [
     {
-      label: "Navigation One",
-      key: "email",
+      label: 'Navigation One',
+      key: 'email',
       icon: <MailOutlined />,
     },
     {
-      label: "Navigation Two",
-      key: "app",
+      label: 'Navigation Two',
+      key: 'app',
       icon: <AppstoreOutlined />,
       disabled: true,
     },
     {
-      label: "Navigation Three-Submenu",
-      key: "submenu",
+      label: 'Navigation Three-Submenu',
+      key: 'submenu',
       icon: <SettingOutlined />,
       children: [
         {
-          type: "group",
-          label: "group 1",
+          type: 'group',
+          label: 'group 1',
           children: [
             {
-              label: "option 1",
-              key: "setting 1",
+              label: 'option 1',
+              key: 'setting 1',
             },
             {
-              label: "option 2",
-              key: "setting 2",
+              label: 'option 2',
+              key: 'setting 2',
             },
           ],
         },
         {
-          type: "group",
-          label: "group 2",
+          type: 'group',
+          label: 'group 2',
           children: [
             {
-              label: "option 3",
-              key: "setting 3",
+              label: 'option 3',
+              key: 'setting 3',
             },
             {
-              label: "option 4",
-              key: "setting 4",
+              label: 'option 4',
+              key: 'setting 4',
             },
           ],
         },
       ],
     },
     {
-      key: "alipay",
+      key: 'alipay',
       label: <a href="#">Navigation Link</a>,
     },
   ];
-  const items2: MenuProps["items"] = [
+  const items2: MenuProps['items'] = [
     UserOutlined,
     LaptopOutlined,
     NotificationOutlined,
@@ -120,9 +120,9 @@ const TestLayOut = () => {
     };
   });
   const Nav: React.FC = () => {
-    const [current, setCurrent] = useState("mail");
-    const onClick: MenuProps["onClick"] = (e) => {
-      console.log("click ", e);
+    const [current, setCurrent] = useState('mail');
+    const onClick: MenuProps['onClick'] = (e) => {
+      //       console.log('click ', e);
       setCurrent(e.key);
     };
     return (
@@ -145,9 +145,9 @@ const TestLayOut = () => {
           <Sider style={siderStyle} width="25%">
             <Menu
               mode="inline"
-              defaultSelectedKeys={["1"]}
-              defaultOpenKeys={["sub1"]}
-              style={{ height: "100%", width: "100%" }}
+              defaultSelectedKeys={['1']}
+              defaultOpenKeys={['sub1']}
+              style={{ height: '100%', width: '100%' }}
               items={items2}
               className="bg-white"
             />
